@@ -154,7 +154,7 @@ $(document).ready(function () {
 			bodyelem = $("body")
 		}
 		else {
-			bodyelem = $("html,body")
+			bodyelem = $("html,body,document")
 		}
 
 
@@ -165,8 +165,8 @@ $(document).ready(function () {
 		$(bodyelem).animate({
 			scrollTop: $( $.attr(this, 'href') ).offset().top - 65
 		}, 500);
+
 		event.preventDefault();
-		return false;
 		//alert("na animate");
 	});
 
