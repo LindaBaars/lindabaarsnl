@@ -152,21 +152,23 @@ $(document).ready(function () {
 
 		if(navigator.userAgent.indexOf("Mac") != -1 ) {
 			bodyelem = $("body")
+			
 		}
 		else {
 			
 			//event.preventDefault();
 			bodyelem = $("html,body,document")
+			$('.nav li').removeClass('active');
+		
+			$(this).parent().addClass('active');
+			
+			$(bodyelem).animate({
+				scrollTop: $( $.attr(this, 'href') ).offset().top - 65
+			}, 500);
 		}
 
 
-		$('.nav li').removeClass('active');
 		
-		$(this).parent().addClass('active');
-		
-		$(bodyelem).animate({
-			scrollTop: $( $.attr(this, 'href') ).offset().top - 65
-		}, 500);
 
 		
 		//alert("na animate");
