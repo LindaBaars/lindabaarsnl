@@ -146,8 +146,14 @@ $(document).ready(function () {
 	
 
 	$(document).on('click', 'nav a', function(event){
+		//alert(" before preventdefault" );
 		event.preventDefault();
+<<<<<<< HEAD
 		/*if(navigator.userAgent.indexOf("Safari") != -1 ) {
+=======
+		//alert(navigator.userAgent);
+		if(navigator.userAgent.indexOf("Mac") != -1 ) {
+>>>>>>> gh-pages
 			
 			bodyelem = $("body")
 		}
@@ -164,6 +170,7 @@ $(document).ready(function () {
 		$(bodyelem).animate({
 			scrollTop: $( $.attr(this, 'href') ).offset().top - 65
 		}, 500);
+		//alert("na animate");
 	});
 
 	$('.submitbutton').click(function() {
