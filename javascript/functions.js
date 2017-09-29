@@ -147,14 +147,13 @@ $(document).ready(function () {
 
 	$('nav a').bind('click', function(event){
 		//alert(" before preventdefault" );
-		event.preventDefault();
+		
 		//alert(navigator.userAgent);
 
 		if(navigator.userAgent.indexOf("Mac") != -1 ) {
 			bodyelem = $("body")
 		}
 		else {
-			
 			bodyelem = $("html,body")
 		}
 
@@ -162,10 +161,11 @@ $(document).ready(function () {
 		$('.nav li').removeClass('active');
 		
 		$(this).parent().addClass('active');
-
+		
 		$(bodyelem).animate({
-			scrollTop: $( $.attr(this, 'linkto') ).offset().top - 65
+			scrollTop: $( $.attr(this, 'href') ).offset().top - 65
 		}, 500);
+		event.preventDefault();
 		//alert("na animate");
 	});
 
