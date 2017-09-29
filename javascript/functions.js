@@ -146,9 +146,9 @@ $(document).ready(function () {
 	
 
 	$(document).on('click', 'nav a', function(event){
-		alert(" before preventdefault" );
+		//alert(" before preventdefault" );
 		event.preventDefault();
-		alert(navigator.userAgent);
+		//alert(navigator.userAgent);
 		if(navigator.userAgent.indexOf("Mac") != -1 ) {
 			
 			bodyelem = $("body")
@@ -166,7 +166,7 @@ $(document).ready(function () {
 		$(bodyelem).animate({
 			scrollTop: $( $.attr(this, 'href') ).offset().top - 65
 		}, 500);
-		alert("na animate");
+		//alert("na animate");
 	});
 
 	$('.submitbutton').click(function() {
