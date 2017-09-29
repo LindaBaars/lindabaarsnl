@@ -146,32 +146,26 @@ $(document).ready(function () {
 	
 
 	$('nav a').bind('click', function(event){
-		//alert(" before preventdefault" );
-		
-		//alert(navigator.userAgent);
-
+		event.preventDefault();
 		if(navigator.userAgent.indexOf("Mac") != -1 ) {
-			bodyelem = $("body")
-			
+			bodyelem = $(".myBody")
 		}
 		else {
 			
-			//event.preventDefault();
-			bodyelem = $("html,body,document")
-			$('.nav li').removeClass('active');
-		
-			$(this).parent().addClass('active');
-			
-			$(bodyelem).animate({
-				scrollTop: $( $.attr(this, 'href') ).offset().top - 65
-			}, 500);
+			bodyelem = $(".myHtml,.myBody")
 		}
 
 
+		$('.nav li').removeClass('active');
 		
+		$(this).parent().addClass('active');
+		
+		$(bodyelem).animate({
+			scrollTop: $( $.attr(this, 'href') ).offset().top - 65
+		}, 500);
 
 		
-		//alert("na animate");
+		
 	});
 
 	$('.submitbutton').click(function() {
