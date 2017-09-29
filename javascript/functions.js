@@ -155,6 +155,7 @@ $(document).ready(function () {
 			
 			bodyelem = $("html,body")
 		}*/
+		alert(navigator.userAgent);
 		bodyelem = $("html,body")
 
 		$('.nav li').removeClass('active');
