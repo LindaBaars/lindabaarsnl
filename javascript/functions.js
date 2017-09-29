@@ -145,7 +145,7 @@ $(document).ready(function () {
 	
 	
 
-	$(document).on('click', 'nav a', function(event){
+	$('nav a').bind('click', function(event){
 		//alert(" before preventdefault" );
 		event.preventDefault();
 		//alert(navigator.userAgent);
