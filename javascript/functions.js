@@ -147,16 +147,15 @@ $(document).ready(function () {
 
 	$(document).on('click', 'nav a', function(event){
 		event.preventDefault();
-		/*if(navigator.userAgent.indexOf("Safari") != -1 ) {
+		if(navigator.userAgent.indexOf("Mac") != -1 ) {
 			
 			bodyelem = $("body")
 		}
 		else {
 			
 			bodyelem = $("html,body")
-		}*/
-		alert(navigator.userAgent);
-		bodyelem = $("html,body")
+		}
+
 
 		$('.nav li').removeClass('active');
 		
