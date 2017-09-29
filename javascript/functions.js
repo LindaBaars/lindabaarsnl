@@ -146,7 +146,9 @@ $(document).ready(function () {
 	
 
 	$(document).on('click', 'nav a', function(event){
+		alert(" before preventdefault" );
 		event.preventDefault();
+		alert(navigator.userAgent);
 		if(navigator.userAgent.indexOf("Mac") != -1 ) {
 			
 			bodyelem = $("body")
