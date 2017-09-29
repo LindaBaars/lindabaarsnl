@@ -3,7 +3,7 @@ $(document).ready(function () {
 	function textLooper(number){
 		if (number == 0)
 		{
-			 typeText("Welkom op de website van Linda Baars",0);
+			 typeText("Welkom op de website van Linda Baars",0); 
 		}  
 		 else {
 			typeText("Registerplein geregistreerd Maatschappelijk Werker uit Utrecht",-1);
