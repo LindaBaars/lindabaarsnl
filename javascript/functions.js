@@ -166,6 +166,7 @@ $(document).ready(function () {
 			scrollTop: $( $.attr(this, 'href') ).offset().top - 65
 		}, 500);
 		event.preventDefault();
+		return false;
 		//alert("na animate");
 	});
 
