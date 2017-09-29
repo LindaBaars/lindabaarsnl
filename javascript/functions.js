@@ -166,6 +166,7 @@ $(document).ready(function () {
 		$(bodyelem).animate({
 			scrollTop: $( $.attr(this, 'href') ).offset().top - 65
 		}, 500);
+		alert("na animate");
 	});
 
 	$('.submitbutton').click(function() {
