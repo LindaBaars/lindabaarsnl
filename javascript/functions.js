@@ -3,7 +3,7 @@ $(document).ready(function () {
 	function textLooper(number){
 		if (number == 0)
 		{
-			 typeText("Welkom op de website van Linda Baars",0); 
+			 typeText("Welkom op de website van Linda Baars",0);
 		}  
 		 else {
 			typeText("Registerplein geregistreerd Maatschappelijk Werker uit Utrecht",-1);
@@ -149,8 +149,8 @@ $(document).ready(function () {
 		//alert(" before preventdefault" );
 		event.preventDefault();
 		//alert(navigator.userAgent);
+
 		if(navigator.userAgent.indexOf("Mac") != -1 ) {
-			
 			bodyelem = $("body")
 		}
 		else {
@@ -164,7 +164,7 @@ $(document).ready(function () {
 		$(this).parent().addClass('active');
 
 		$(bodyelem).animate({
-			scrollTop: $( $.attr(this, 'href') ).offset().top - 65
+			scrollTop: $( $.attr(this, 'linkto') ).offset().top - 65
 		}, 500);
 		//alert("na animate");
 	});
