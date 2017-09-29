@@ -62,26 +62,27 @@ $(document).ready(function () {
 	}
 	
 	if($(window).scrollTop() > 0){
+		
 		$('.ribbon').addClass('activeRibbon');
 	} else {
 		$('.ribbon').removeClass('activeRibbon');
 	}
 
-	window.onscroll = function (event) {
-	
-		if ($(window).scrollTop() < $('.page:nth-child(2)').position().top-100)
+	document.onscroll = function (event) {
+		
+		if ($(document).scrollTop() < $('.page:nth-child(2)').position().top-100)
 		{
 			$('.nav li').removeClass('active');
 			$('.nav li:nth-child(1)').addClass('active');
-		} else if ($(window).scrollTop() > $('.page:nth-child(2)').position().top-100 && $(window).scrollTop() < $('.page:nth-child(3)').position().top)
+		} else if ($(document).scrollTop() > $('.page:nth-child(2)').position().top-100 && $(document).scrollTop() < $('.page:nth-child(3)').position().top)
 		{
 			$('.nav li').removeClass('active');
 			$('.nav li:nth-child(2)').addClass('active');
-		} else if ($(window).scrollTop() > $('.page:nth-child(3)').position().top && $(window).scrollTop() < $('.page:nth-child(4)').position().top)
+		} else if ($(document).scrollTop() > $('.page:nth-child(3)').position().top && $(document).scrollTop() < $('.page:nth-child(4)').position().top)
 		{
 			$('.nav li').removeClass('active');
 			$('.nav li:nth-child(3)').addClass('active');
-		} else if ($(window).scrollTop() > $('.page:nth-child(4)').position().top && $(window).scrollTop() < $('.page:nth-child(5)').position().top-200)
+		} else if ($(document).scrollTop() > $('.page:nth-child(4)').position().top && $(document).scrollTop() < $('.page:nth-child(5)').position().top-200)
 		{
 			$('.nav li').removeClass('active');
 			$('.nav li:nth-child(4)').addClass('active');
@@ -91,12 +92,12 @@ $(document).ready(function () {
 			$('.nav li:nth-child(5)').addClass('active');
 		}
 
-		if($(window).scrollTop() > 0){
+		if($(document).scrollTop() > 0){
 			$('.ribbon').addClass('activeRibbon');
 		} else {
 			$('.ribbon').removeClass('activeRibbon');
 		}
-		if($(window).scrollTop() > 200){
+		if($(document).scrollTop() > 200){
 			//$('.jumbotron').css({'opacity':'0.5'});
 		}
 	}
