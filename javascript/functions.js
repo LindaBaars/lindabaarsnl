@@ -154,6 +154,8 @@ $(document).ready(function () {
 			bodyelem = $("body")
 		}
 		else {
+			
+			//event.preventDefault();
 			bodyelem = $("html,body,document")
 		}
 
@@ -166,7 +168,7 @@ $(document).ready(function () {
 			scrollTop: $( $.attr(this, 'href') ).offset().top - 65
 		}, 500);
 
-		event.preventDefault();
+		
 		//alert("na animate");
 	});
 
