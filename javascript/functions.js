@@ -148,27 +148,23 @@ $(document).ready(function () {
 	$(document).on('click', 'nav a', function(event){
 		//alert(" before preventdefault" );
 		event.preventDefault();
-<<<<<<< HEAD
-		/*if(navigator.userAgent.indexOf("Safari") != -1 ) {
-=======
 		//alert(navigator.userAgent);
+
 		if(navigator.userAgent.indexOf("Mac") != -1 ) {
->>>>>>> gh-pages
-			
 			bodyelem = $("body")
 		}
 		else {
 			
 			bodyelem = $("html,body")
-		}*/
-		bodyelem = $("html,body")
+		}
+
 
 		$('.nav li').removeClass('active');
 		
 		$(this).parent().addClass('active');
 
 		$(bodyelem).animate({
-			scrollTop: $( $.attr(this, 'href') ).offset().top - 65
+			scrollTop: $( $.attr(this, 'linkto') ).offset().top - 65
 		}, 500);
 		//alert("na animate");
 	});
