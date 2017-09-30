@@ -1,5 +1,5 @@
 $(document).ready(function () {
-	alert(document.URL);
+	alert("documebnt " + document.URL);
 	if(navigator.userAgent.indexOf("Mac") != -1) {
 		alert(window.location);
 			window.location.replace("https://lindabaars.github.io/lindabaarsnl/");
