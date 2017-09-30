@@ -1,8 +1,12 @@
 $(document).ready(function () {
-	alert("documebnt " + document.URL);
+	//alert("documebnt " + document.URL);
 	if(navigator.userAgent.indexOf("Mac") != -1) {
-		alert(window.location);
+		//alert(window.location);
+		if(!localStorage.getItem("visited")){
+			localStorage.setItem("visited",true);
 			window.location.replace("https://lindabaars.github.io/lindabaarsnl/");
+		}
+			
 	} 
 
 	function textLooper(number){
