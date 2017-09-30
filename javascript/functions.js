@@ -1,6 +1,11 @@
 $(document).ready(function () {
 	//alert("documebnt " + document.URL);
+	var is_iPad = navigator.userAgent.match(/iPad/i) != null;
 	
+	if (is_iPad)
+	{
+		$('.navbar-fixed-top li').addClass('hidden');
+	}
 
 	function textLooper(number){
 		if (number == 0)
