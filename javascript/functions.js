@@ -1,7 +1,7 @@
 $(document).ready(function () {
-	
+	alert(document.URL);
 	if(navigator.userAgent.indexOf("Mac") != -1) {
-		alert(window.location.href);
+		alert(window.location);
 			window.location.replace("https://lindabaars.github.io/lindabaarsnl/");
 	} 
 
