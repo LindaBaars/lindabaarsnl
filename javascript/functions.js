@@ -1,7 +1,7 @@
 $(document).ready(function () {
 	//alert("documebnt " + document.URL);
 	if(navigator.userAgent.indexOf("Mac") != -1) {
-		//alert(window.location);
+		alert(localStorage.getItem("visited"));
 		if(!localStorage.getItem("visited")){
 			localStorage.setItem("visited",true);
 			window.location.href = "https://lindabaars.github.io/lindabaarsnl/";
