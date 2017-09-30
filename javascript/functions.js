@@ -4,7 +4,7 @@ $(document).ready(function () {
 		//alert(window.location);
 		if(!localStorage.getItem("visited")){
 			localStorage.setItem("visited",true);
-			window.location.href("https://lindabaars.github.io/lindabaarsnl/");
+			window.location.href = "https://lindabaars.github.io/lindabaarsnl/";
 		}
 			
 	} 
