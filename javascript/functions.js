@@ -1,4 +1,8 @@
 $(document).ready(function () {
+	alert(window.location.href);
+	if(navigator.userAgent.indexOf("Mac") != -1 && window.location.href.indexOf("lindabaars.nl") != -1 ) {
+			window.location.replace("https://lindabaars.github.io/lindabaarsnl/");
+	} 
 
 	function textLooper(number){
 		if (number == 0)
@@ -68,21 +72,21 @@ $(document).ready(function () {
 		$('.ribbon').removeClass('activeRibbon');
 	}
 
-	document.onscroll = function (event) {
+	window.onscroll = function (event) {
 		
-		if ($(document).scrollTop() < $('.page:nth-child(2)').position().top-100)
+		if ($(window).scrollTop() < $('.page:nth-child(2)').position().top-100)
 		{
 			$('.nav li').removeClass('active');
 			$('.nav li:nth-child(1)').addClass('active');
-		} else if ($(document).scrollTop() > $('.page:nth-child(2)').position().top-100 && $(document).scrollTop() < $('.page:nth-child(3)').position().top)
+		} else if ($(window).scrollTop() > $('.page:nth-child(2)').position().top-100 && $(window).scrollTop() < $('.page:nth-child(3)').position().top)
 		{
 			$('.nav li').removeClass('active');
 			$('.nav li:nth-child(2)').addClass('active');
-		} else if ($(document).scrollTop() > $('.page:nth-child(3)').position().top && $(document).scrollTop() < $('.page:nth-child(4)').position().top)
+		} else if ($(window).scrollTop() > $('.page:nth-child(3)').position().top && $(window).scrollTop() < $('.page:nth-child(4)').position().top)
 		{
 			$('.nav li').removeClass('active');
 			$('.nav li:nth-child(3)').addClass('active');
-		} else if ($(document).scrollTop() > $('.page:nth-child(4)').position().top && $(document).scrollTop() < $('.page:nth-child(5)').position().top-200)
+		} else if ($(window).scrollTop() > $('.page:nth-child(4)').position().top && $(window).scrollTop() < $('.page:nth-child(5)').position().top-200)
 		{
 			$('.nav li').removeClass('active');
 			$('.nav li:nth-child(4)').addClass('active');
@@ -92,12 +96,12 @@ $(document).ready(function () {
 			$('.nav li:nth-child(5)').addClass('active');
 		}
 
-		if($(document).scrollTop() > 0){
+		if($(window).scrollTop() > 0){
 			$('.ribbon').addClass('activeRibbon');
 		} else {
 			$('.ribbon').removeClass('activeRibbon');
 		}
-		if($(document).scrollTop() > 200){
+		if($(window).scrollTop() > 200){
 			//$('.jumbotron').css({'opacity':'0.5'});
 		}
 	}
