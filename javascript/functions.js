@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 $(document).ready(function () {
 	//alert("documebnt " + document.URL);
 	var is_iPad = navigator.userAgent.match(/iPad/i) != null;
@@ -302,15 +302,8 @@ function sendData(){
 };
 
 
-=======
+
 $(document).ready(function () {
-	//alert("documebnt " + document.URL);
-	var is_iPad = navigator.userAgent.match(/iPad/i) != null;
-	
-	if (is_iPad)
-	{
-		$('.navbar-fixed-top li').addClass('hidden');
-	}
 
 	function textLooper(number){
 		if (number == 0)
@@ -374,14 +367,13 @@ $(document).ready(function () {
 	}
 	
 	if($(window).scrollTop() > 0){
-		
 		$('.ribbon').addClass('activeRibbon');
 	} else {
 		$('.ribbon').removeClass('activeRibbon');
 	}
 
 	window.onscroll = function (event) {
-		
+	
 		if ($(window).scrollTop() < $('.page:nth-child(2)').position().top-100)
 		{
 			$('.nav li').removeClass('active');
@@ -458,27 +450,25 @@ $(document).ready(function () {
 	
 	
 
-	$('nav a').bind('click', function(event){
+	$(document).on('click', 'nav a', function(event){
 		event.preventDefault();
+		
 		if(navigator.userAgent.indexOf("Mac") != -1 ) {
-			bodyelem = $(".myBody")
+			
+			bodyelem = $("body")
 		}
 		else {
-			
-			bodyelem = $(".myHtml,.myBody")
+			bodyelem = $("html,body")
 		}
 
 
 		$('.nav li').removeClass('active');
 		
 		$(this).parent().addClass('active');
-		
+
 		$(bodyelem).animate({
 			scrollTop: $( $.attr(this, 'href') ).offset().top - 65
 		}, 500);
-
-		
-		
 	});
 
 	$('.submitbutton').click(function() {
@@ -605,5 +595,3 @@ function sendData(){
 	
 };
 
-
->>>>>>> 3e8c3d0243397855f2d89d3348f64d8c67926fdd
