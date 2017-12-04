@@ -1,4 +1,12 @@
+
 $(document).ready(function () {
+	//alert("documebnt " + document.URL);
+	var is_iPad = navigator.userAgent.match(/iPad/i) != null;
+	
+	if (is_iPad)
+	{
+		$('.navbar-fixed-top li').addClass('hidden');
+	}
 
 	function textLooper(number){
 		if (number == 0)
@@ -62,13 +70,14 @@ $(document).ready(function () {
 	}
 	
 	if($(window).scrollTop() > 0){
+		
 		$('.ribbon').addClass('activeRibbon');
 	} else {
 		$('.ribbon').removeClass('activeRibbon');
 	}
 
 	window.onscroll = function (event) {
-	
+		
 		if ($(window).scrollTop() < $('.page:nth-child(2)').position().top-100)
 		{
 			$('.nav li').removeClass('active');
@@ -145,25 +154,27 @@ $(document).ready(function () {
 	
 	
 
-	$(document).on('click', 'nav a', function(event){
+	$('nav a').bind('click', function(event){
 		event.preventDefault();
-		if(navigator.userAgent.indexOf("Safari") != -1 ) {
-			
-			bodyelem = $("body")
+		if(navigator.userAgent.indexOf("Mac") != -1 ) {
+			bodyelem = $(".myBody")
 		}
 		else {
 			
-			bodyelem = $("html,body")
+			bodyelem = $(".myHtml,.myBody")
 		}
 
 
 		$('.nav li').removeClass('active');
 		
 		$(this).parent().addClass('active');
-
+		
 		$(bodyelem).animate({
 			scrollTop: $( $.attr(this, 'href') ).offset().top - 65
 		}, 500);
+
+		
+		
 	});
 
 	$('.submitbutton').click(function() {
@@ -289,5 +300,4 @@ function sendData(){
 
 	
 };
-
 
