@@ -195,7 +195,7 @@ h1 {
 
 /* werkervaring */
 
-#werkervaring h1, #opleiding h1 {
+#werkervaring h1, #opleiding h1 , #contact h1 {
 	margin-top:50px;
 	margin-bottom:40px;
 }
@@ -423,7 +423,9 @@ h1 {
 	position:absolute;
 	text-align:center;
 }
-
+h1 {
+	    
+}
 
 .parallax {
     /* The image used */
@@ -436,6 +438,24 @@ h1 {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+	font-size:20px;
+	text-align:justify;
+	padding-top: 30px;
+	padding-bottom: 50px;
+	color:#fff;
+}
+
+.center {
+	text-align:center;
+	font-size:33px;
+}
+
+.parallax .seperator, .parallax2 .seperator {
+	border-color:#fff;
+}
+
+.parallax .col {
+	padding:20px 60px 20px 60px;
 }
 
 .parallax2 {
@@ -597,7 +617,12 @@ iframe .fielderror {
 		z-index: 100;
 		top:0;
 	}
-
+	.parallax {
+		font-size:18px;
+		padding-top: 0px;
+		padding-bottom: 20px;
+	}
+	
 
 }
 
@@ -621,3 +646,4 @@ iframe .fielderror {
 	}
 	
 }
+
