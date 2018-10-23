@@ -1,12 +1,12 @@
-
 $(document).ready(function () {
-	//alert("documebnt " + document.URL);
-	var is_iPad = navigator.userAgent.match(/iPad/i) != null;
-	
-	if (is_iPad)
-	{
-		$('.navbar-fixed-top li').addClass('hidden');
-	}
+
+	$("nav").find("a").click(function(e) {
+    e.preventDefault();
+    var section = $(this).attr("href");
+    $("html, body").animate({
+        scrollTop: $(section).offset().top
+    });
+});
 
 	function textLooper(number){
 		if (number == 0)
@@ -14,7 +14,7 @@ $(document).ready(function () {
 			 typeText("Welkom op de website van Linda Baars",0);
 		}  
 		 else {
-			typeText("Registerplein geregistreerd Maatschappelijk Werker en Co-trainer uit Utrecht",-1);
+			typeText("Registerplein geregistreerd Maatschappelijk Werker uit Utrecht",-1);
 		}
 		
 		/*else if (number == 1)
@@ -70,14 +70,13 @@ $(document).ready(function () {
 	}
 	
 	if($(window).scrollTop() > 0){
-		
 		$('.ribbon').addClass('activeRibbon');
 	} else {
 		$('.ribbon').removeClass('activeRibbon');
 	}
 
 	window.onscroll = function (event) {
-		
+	
 		if ($(window).scrollTop() < $('.page:nth-child(2)').position().top-100)
 		{
 			$('.nav li').removeClass('active');
@@ -154,27 +153,25 @@ $(document).ready(function () {
 	
 	
 
-	$('nav a').bind('click', function(event){
+	$(document).on('click', 'nav a', function(event){
 		event.preventDefault();
-		if(navigator.userAgent.indexOf("Mac") != -1 ) {
-			bodyelem = $(".myBody")
+		if(navigator.userAgent.indexOf("Safari") != -1 ) {
+			
+			bodyelem = $("body")
 		}
 		else {
 			
-			bodyelem = $(".myHtml,.myBody")
+			bodyelem = $("html,body")
 		}
 
 
 		$('.nav li').removeClass('active');
 		
 		$(this).parent().addClass('active');
-		
+
 		$(bodyelem).animate({
 			scrollTop: $( $.attr(this, 'href') ).offset().top - 65
 		}, 500);
-
-		
-		
 	});
 
 	$('.submitbutton').click(function() {
@@ -300,4 +297,5 @@ function sendData(){
 
 	
 };
+
 
