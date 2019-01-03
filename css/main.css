@@ -378,6 +378,7 @@ h1 {
 
 .media .container .col {
 	margin-top:20px;
+	    text-align: center;
 }
 
 .media .container .col a {
@@ -388,41 +389,21 @@ h1 {
 	background:#000;
 }
 
-.media .col:nth-child(2) a{
+
+.media .col a{
 	color:#fff;
 	padding:50px;
 	border-radius:100%;
 	background:#006293;
 	font-size:60px;
-	right:25%;
-	position:absolute;
 }
 
-.media .col:nth-child(3) a{
-	color:#fff;
-	padding:50px;
-	border-radius:100%;
-	background:#006293;
-	font-size:60px;
-	left:25%;
-	position:absolute;
-}
-
-.media .col:nth-child(2) .title{
+.media .col .title{
 	font-size:16px;
-	right: 22.5%;
-	top:180px;
-	position:absolute;
+	margin-top:20px;
 	text-align:center;
 }
 
-.media .col:nth-child(3) .title{
-	font-size:16px;
-	left:19%;
-	top:180px;
-	position:absolute;
-	text-align:center;
-}
 h1 {
 	    
 }
@@ -580,43 +561,24 @@ iframe .fielderror {
 		margin-top: -4px;
 	}
 
-	.media .col:nth-child(2) a{
+	.media .col a{
 		color:#fff;
 		padding:30px;
 		border-radius:100%;
 		background:#006293;
 		font-size:30px;
-		right:25%;
-		position:absolute;
 	}
 
-	.media .col:nth-child(3) a{
-		color:#fff;
-		padding:30px;
-		border-radius:100%;
-		background:#006293;
-		font-size:30px;
-		left:25%;
-		position:absolute;
-	}
-	.media .col:nth-child(2) .title{
+	
+	.media .col .title{
 		font-size: 16px;
-		right: 0px; 
-		left: 15%; 
-		margin-top: 110px;
+		right: 0px;  
 		position: relative;
 		z-index: 100;
 		top:0;
 		}
 
-	.media .col:nth-child(3) .title{
-		font-size: 16px; 
-		left: -12%;
-		margin-top: 110px;
-		position: relative;
-		z-index: 100;
-		top:0;
-	}
+	
 	.parallax {
 		font-size:18px;
 		padding-top: 0px;
