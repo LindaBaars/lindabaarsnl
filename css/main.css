@@ -205,12 +205,14 @@ h1 {
 .carrousselLeft {
 	position:absolute;
 	width:50px;
-	left: -50px;
+	left: -25px;
 	font-size:50px;
-	
-	color:#111;
+	background:rgba(0,0,0,0.4);
+	color:#fff;
 	z-index:1000;
-	height: calc(100% - 15px);
+	height: 80px;
+	top: calc(50% - 40px);
+
 	border-top-left-radius: 10px;
 	border-bottom-left-radius: 10px;
 }
@@ -218,17 +220,19 @@ h1 {
 .carrousselRight {
 	position:absolute;
 	width:50px;
-	right:-25px;
+	right:0px;
 	font-size:50px;
-	background:rgba(0,0,0,0.1);
-	color:#111;
+	background:rgba(0,0,0,0.4);
+	color:#fff;
 	z-index:1000;
-	height: calc(100% - 17px);
+	top: calc(50% - 40px);
+	height: 80px;
 	border-top-right-radius: 10px;
 	border-bottom-right-radius: 10px;
 }
 
 .carrousselLeft:hover, .carrousselRight:hover {
+	background:rgba(0,0,0,0.9);
 	cursor:pointer;
 }
 
@@ -337,7 +341,7 @@ h1 {
 	color:#fff;
 	font-size:34px;
 	margin-top:-38px;
-	    top: -55px;
+	top: -55px;
 	background:#006293;
 	transition: all 0.3s;
 }
@@ -351,6 +355,7 @@ h1 {
 	border-top-left-radius: 8px;
 	border-top-right-radius: 8px;
 	transition: all 0.3s;
+	max-height: 240px;
 }
 
 .block:hover img {
