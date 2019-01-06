@@ -205,10 +205,10 @@ h1 {
 .carrousselLeft {
 	position:absolute;
 	width:50px;
-	left: -25px;
+	left: -50px;
 	font-size:50px;
-	background:rgba(0,0,0,0.1);
-	color:#fff;
+	
+	color:#111;
 	z-index:1000;
 	height: calc(100% - 15px);
 	border-top-left-radius: 10px;
@@ -218,10 +218,10 @@ h1 {
 .carrousselRight {
 	position:absolute;
 	width:50px;
-	right:0px;
+	right:-25px;
 	font-size:50px;
 	background:rgba(0,0,0,0.1);
-	color:#fff;
+	color:#111;
 	z-index:1000;
 	height: calc(100% - 17px);
 	border-top-right-radius: 10px;
@@ -229,7 +229,6 @@ h1 {
 }
 
 .carrousselLeft:hover, .carrousselRight:hover {
-	background:rgba(0,0,0,0.9);
 	cursor:pointer;
 }
 
