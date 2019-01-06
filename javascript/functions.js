@@ -109,6 +109,55 @@ $(document).ready(function () {
 		}
 	}
 
+	$(document).on('click', '.carrousselLeft', function(event){
+		$('.ball').removeClass('active');
+		if($('.expandableContainer').hasClass('step1')){
+			
+		}
+		if($('.expandableContainer').hasClass('step2')){
+			$('.expandableContainer').removeClass('step2');
+			$('.expandableContainer').addClass('step1');
+			$('.ball:nth-child(1)').addClass('active');
+		}
+		if($('.expandableContainer').hasClass('step3')){
+			$('.expandableContainer').removeClass('step3');
+			$('.expandableContainer').addClass('step2');
+			$('.ball:nth-child(2)').addClass('active');
+		}
+		if($('.expandableContainer').hasClass('step4')){
+			$('.expandableContainer').removeClass('step4');
+			$('.expandableContainer').addClass('step3');
+			$('.ball:nth-child(3)').addClass('active');
+		}
+	});
+	$(document).on('click', '.carrousselRight', function(event){
+		$('.ball').removeClass('active');
+
+		if($('.expandableContainer').hasClass('step4')){
+			$('.ball:nth-child(4)').addClass('active');
+		}
+
+		if($('.expandableContainer').hasClass('step3')){
+			$('.expandableContainer').removeClass('step3');
+			$('.expandableContainer').addClass('step4');
+			$('.ball:nth-child(4)').addClass('active');
+		}
+
+		if($('.expandableContainer').hasClass('step2')){
+			$('.expandableContainer').removeClass('step2');
+			$('.expandableContainer').addClass('step3');
+			$('.ball:nth-child(3)').addClass('active');
+		}
+
+		if($('.expandableContainer').hasClass('step1')){
+			$('.expandableContainer').removeClass('step1');
+			$('.expandableContainer').addClass('step2');
+			$('.ball:nth-child(2)').addClass('active');
+		}
+	});
+
+
+
 	$(document).on('click', '.ball:nth-child(1)', function(event){
 		$('.ball').removeClass('active');
 		$(this).addClass('active');
